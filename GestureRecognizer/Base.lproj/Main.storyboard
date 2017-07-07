@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WH2-ac-Shm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Badass App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,31 +27,168 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0c-al-QSg">
+                                <rect key="frame" x="112" y="172" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="SceneKit Demo">
+                                    <color key="titleColor" red="0.0084813047859999997" green="0.1247944689" blue="0.64455107869999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dio-WL-Orf" kind="show" id="zwV-bc-k3C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-Ve-1Rn">
+                                <rect key="frame" x="112" y="226" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Gesture Recognizer">
+                                    <color key="titleColor" red="0.0084813047859999997" green="0.1247944689" blue="0.64455107869999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lnn-DN-Q4h" kind="show" id="eMr-jA-nmR"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="i06-V5-PH4" appends="YES" id="igR-e9-L1W"/>
-                            <outletCollection property="gestureRecognizers" destination="aef-sJ-2pg" appends="YES" id="I8b-Mj-CVK"/>
-                        </connections>
                     </view>
-                    <connections>
-                        <outlet property="statusLabel" destination="M6g-UA-jY1" id="OMS-Ko-Jkq"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Badass App" largeTitleDisplayMode="always" id="iaH-xy-7UY">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rNd-Ek-j8X"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="i06-V5-PH4">
+            </objects>
+            <point key="canvasLocation" x="1322" y="135"/>
+        </scene>
+        <!--SceneKit Demo-->
+        <scene sceneID="djd-g0-N1E">
+            <objects>
+                <viewController id="dio-WL-Orf" customClass="SceneKitViewController" customModule="GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7a4-Lg-ysd"/>
+                        <viewControllerLayoutGuide type="bottom" id="KfZ-SR-mwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="597-4W-FeF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-RZ-O16" userLabel="cameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBy-p1-5rI" userLabel="scnView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24791160225868225" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SceneKit Demo" largeTitleDisplayMode="always" id="uq5-pY-JlK"/>
                     <connections>
-                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="6En-19-yny"/>
+                        <outlet property="cameraView" destination="OXb-RZ-O16" id="dKm-1q-g1I"/>
+                        <outlet property="parentView" destination="597-4W-FeF" id="jJE-wc-LNe"/>
+                        <outlet property="scnView" destination="FBy-p1-5rI" id="swG-rH-aN7"/>
                     </connections>
-                </tapGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTouchesRequired="3" id="aef-sJ-2pg">
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxA-yf-krv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="135.38230884557723"/>
+        </scene>
+        <!--Gesture Recognizer-->
+        <scene sceneID="cti-uv-CcX">
+            <objects>
+                <viewController id="lnn-DN-Q4h" customClass="GestureRecognizerViewController" customModule="GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEm-Td-cMF"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1c-K2-lgx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M0T-FQ-25r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCR-cf-d2Z">
+                                <rect key="frame" x="187.5" y="616" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-SS-6S6">
+                                <rect key="frame" x="107" y="128" width="161" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Double Tap
+Triple Press
+Down Swipe</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Gesture Detected:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agr-Nt-Etz">
+                                <rect key="frame" x="99.5" y="523" width="176" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="agr-Nt-Etz" firstAttribute="centerX" secondItem="M0T-FQ-25r" secondAttribute="centerX" id="1Px-3b-VX5"/>
+                            <constraint firstItem="jjr-SS-6S6" firstAttribute="centerX" secondItem="M0T-FQ-25r" secondAttribute="centerX" id="8je-0o-6iC"/>
+                            <constraint firstItem="eCR-cf-d2Z" firstAttribute="centerX" secondItem="M0T-FQ-25r" secondAttribute="centerX" id="DGL-8u-0lx"/>
+                            <constraint firstItem="jjr-SS-6S6" firstAttribute="top" secondItem="JEm-Td-cMF" secondAttribute="bottom" constant="64" id="SsN-OV-dsE"/>
+                            <constraint firstItem="f1c-K2-lgx" firstAttribute="top" secondItem="eCR-cf-d2Z" secondAttribute="bottom" constant="51" id="T7B-EY-3XE"/>
+                            <constraint firstItem="agr-Nt-Etz" firstAttribute="top" secondItem="jjr-SS-6S6" secondAttribute="bottom" constant="278" id="fj2-42-Cw7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xKs-BK-og2" appends="YES" id="pO8-T0-nAE"/>
+                            <outletCollection property="gestureRecognizers" destination="mKS-VK-hW0" appends="YES" id="SDq-r5-uj4"/>
+                            <outletCollection property="gestureRecognizers" destination="x3u-eJ-htF" appends="YES" id="Afx-7C-ikR"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gesture Recognizer" id="Q4n-4j-2Eu"/>
                     <connections>
-                        <action selector="longPressDetected:" destination="BYZ-38-t0r" id="BIH-ET-B8U"/>
+                        <outlet property="statusLabel" destination="eCR-cf-d2Z" id="gPV-oC-wLR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MB5-G6-A5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="x3u-eJ-htF">
+                    <connections>
+                        <action selector="swipeWasDetected:" destination="lnn-DN-Q4h" id="l4z-Pc-0Ua"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTouchesRequired="3" id="mKS-VK-hW0">
+                    <connections>
+                        <action selector="longPressWasDetected:" destination="lnn-DN-Q4h" id="6Nh-3t-tDR"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="xKs-BK-og2">
+                    <connections>
+                        <action selector="tapWasDetected:" destination="lnn-DN-Q4h" id="Hot-LR-xhS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2076" y="887.40629685157433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ve-15-Ddh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WH2-ac-Shm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VfL-bd-cJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sjo-xh-xmY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgR-WF-ror" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.19999999999999" y="138.53073463268368"/>
         </scene>
     </scenes>
 </document>
